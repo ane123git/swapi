@@ -8,6 +8,7 @@ import Filter from "./Filter";
 // Glue all components together
 class App extends Component {
   render() {
+  console.log("sadfasdcas");
     return (
       <div className="container">
         <Header />
