@@ -1,23 +1,24 @@
-import React, { Component } from "react";
+import React from 'react';
 
-import Header from "./Header";
-import SearchBar from "./SearchBar/SearchBar";
-import ItemList from "./ItemList";
-import Filter from "./Filter";
 
-// Glue all components together
-class App extends Component {
-  render() {
-  console.log("sadfasdcas");
-    return (
-      <div className="container">
-        <Header />
-        <SearchBar />
-        <Filter />
-        <ItemList />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
