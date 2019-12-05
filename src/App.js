@@ -34,9 +34,21 @@ return
 
 console.log("Input XML is"+this.state.noteText)
 var InpXMLNew="<InputXML>"+this.state.noteText+"</InputXML>";
+
 let domParser = new DOMParser();
 let domXml = domParser.parseFromString(InpXMLNew, 'text/xml');
+
+var oSerializer = new XMLSerializer();
+var sXML = oSerializer.serializeToString(domXml);
+console.log("Input XML is"+sXML);
+
 var rootElement = domXml.documentElement;
+
+  var nodelist_parsererror = domXml.getElementsByTagName("parsererror");
+  if(null!=nodelist_parsererror && 0< nodelist_parsererror.length){
+           console.log("Removing unwated element ")
+           nodelist_parsererror[0].parentNode.removeChild(nodelist_parsererror[0]);
+           }
 
 
 
@@ -50,13 +62,19 @@ var rootElement = domXml.documentElement;
 
          while(treeWalker.nextNode()){
         var currentEle= treeWalker.currentNode;
-         console.log("Current Element is "+currentEle.tagName);
+         console.log("Current Element is "+currentEle.tagName+" Type is "+currentEle.nodeType);
+
+         if("parsererror" == currentEle.tagName){
+         console.log("Ignore "+currentEle.tagName)
+         }
+         else{
                var attrs = currentEle.attributes;
                 var output = "";
                 for(var i = attrs.length - 1; i >= 0; i--) {
                   output = attrs[i].name ;
                   console.log(output)
                   this.state.nodeList.push(output);
+                  }
                   }
          }
          console.log("column set is "+this.state.inpColCount)
