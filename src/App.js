@@ -33,8 +33,9 @@ return
 }
 
 console.log("Input XML is"+this.state.noteText)
+var InpXMLNew="<InputXML>"+this.state.noteText+"</InputXML>";
 let domParser = new DOMParser();
-let domXml = domParser.parseFromString(this.state.noteText, 'text/xml');
+let domXml = domParser.parseFromString(InpXMLNew, 'text/xml');
 var rootElement = domXml.documentElement;
 
 
