@@ -1,0 +1,104 @@
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 10vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+
+.btn {
+  position: static;
+
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 2px solid #8C92C6;
+    font: normal normal bold 10pt Tahoma;
+    width: 70px;
+    height: 18px;
+    margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 100%;
+
+
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+
+
+#table_attr {
+  text-align: left;
+
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 15%;
+  margin-top: 10%;
+
+}
+
+#table_attr td, #table_attr th {
+  border: 3px solid #000000;
+
+}
+
+/*#table_attr tr:nth-child(even){background-color: #f2f2f2;}
+
+#table_attr tr:hover {background-color: #ddd;}*/
+
+#table_attr th {
+  font-weight: bold;
+  font-family: "Trebuchet MS", Arial, Verdana;
+  font-size: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  text-align: center;
+  background-color: #800000;
+  color: white;
+
+}
+
+#table_attr tr {
+  font-weight: normal;
+  font-family: "Trebuchet MS", Arial, Verdana;
+  font-size: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  text-align: left;
+  color: black;
+
+
+}
+
+.inputXMLArea{
+   background-color: white;
+   width: 500px;
+   height: 200px;
+}
+
+.inputColumnText{
+   background-color: white;
+   width: 30px;
+   height: 10px;
+}
